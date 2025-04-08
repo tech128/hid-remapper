@@ -173,7 +173,7 @@ static void set_led_mode(LedMode led_mode_) {
 }
 
 static void scan_start() {
-    if (CHK(bt_scan_start(BT_SCAN_TYPE_SCAN_PASSIVE))) {
+    if (CHK(bt_scan_start(BT_SCAN_TYPE_SCAN_ACTIVE))) {
         LOG_DBG("Scanning started.");
         scanning = true;
     }
